@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="StudantManager.master.cs" Inherits="Student_StudantManager" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+      
+    <link href="../css/Main.css" rel="stylesheet" />
+     <style type="text/css">
+        #img1
+        {
+            height: 215px;
+            width: 458px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id ="main">
+        <div id ="header">
+            <br /><br /><br />
+            <div id ="name">
+                OnlineExam
+            </div>
+            <div id ="nav">
+                <asp:Menu   ForeColor ="#ffff99" Font-Size ="20px" runat ="server" Font-Underline ="false" Orientation ="Horizontal" >
+                       <StaticMenuItemStyle Width ="150px" />
+                     <Items>
+                    <asp:MenuItem NavigateUrl="~/Student/Default.aspx" Text="Home" Value="Home">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Account Info" Value="Account Info">
+                        <asp:MenuItem NavigateUrl="~/Student/StuChangePassword.aspx" Text="Change Password" 
+                            Value="Change Password"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Student/StuPersonalInfo.aspx" Text="Personal Info" 
+                            Value="Personal Info"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Request for Exam" Value="Request for Exam"  NavigateUrl="~/Student/StuRequestforExam.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Request Status" Value="Request Status" 
+                        NavigateUrl="~/Student/StuRequst_Status.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Student/StudentSignout.aspx" Text="Sign Out" 
+                        Value="Sign Out">
+                    </asp:MenuItem>
+                   </Items>
+                </asp:Menu>
+                   </div>
+             <div id ="img">
+            <img src="../Images/IM.GIF" id ="img1"/>
+            </div>
+            <div id ="welcomeu">
+           
+                Welcome to OnlineExam , Portal for Entrance Test / Exam Training Online. Entrance Exam Practice, Mock Test, Sample Test Practice, Online Testing. Student career test, Engineering/Medical Entrance Exam, Medical Entrance Exam, MBA/MCA Entrance Exam, General Studies and Test of Non Verbal Reasoning Test Practice
+           
+          </div>
+          
+        </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <div id ="footer">
+            <br />
+            <center><h4>Copyright -Deep Govind</h4></center>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

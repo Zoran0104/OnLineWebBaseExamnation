@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Admin_AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+  
+    <link href="../css/Main.css" rel="stylesheet" />
+     <title></title>
+    <style type="text/css">
+        #img1
+        {
+            height: 215px;
+            width: 458px;
+        }
+        #menu1
+        {
+            font-size:20px;
+           
+        } 
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id ="main">
+        <div id ="headeradm">
+            <br /><br /><br />
+            <div id ="name">
+                OnlineExam
+            </div>
+            <div id ="navad">
+                <br /><br />
+               <asp:Menu id ="menu1"  ForeColor ="#ffff99" runat ="server" Font-Underline ="false" Orientation ="Horizontal"  >
+                     <Items>
+                       <asp:MenuItem NavigateUrl ="~/Admin/Default.aspx"  Text ="Home" Value ="Home">
+
+                       </asp:MenuItem>
+                         <asp:MenuItem Text="Admin" Value="Admin"> 
+                          <asp:MenuItem NavigateUrl ="~/Admin/AdminChangePassword.aspx" Text ="Change Password" Value ="Change Password"></asp:MenuItem>
+                             <asp:MenuItem NavigateUrl ="~/Admin/AddNewAdmin.aspx" Text ="Add New Admin" Value ="Add New Admin"></asp:MenuItem>
+                        </asp:MenuItem>
+                       
+                       <asp:MenuItem NavigateUrl ="~/Admin/AdminExamType.aspx" Text ="Create Exam Type" Value ="Create Exam Type">
+
+                       </asp:MenuItem>
+                        <asp:MenuItem Text="Exams" Value="Exams">
+                        <asp:MenuItem NavigateUrl="~/Admin/Exams.aspx" Text="Create Exam" Value="Create Exam"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Admin/EditExam.aspx" Text="Edit Exam" Value="Edit Exam"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Questions" Value="Qustions">
+                        <asp:MenuItem NavigateUrl="~/Admin/EditExamQustion.aspx" 
+                            Text="Create Question" Value="Create Qustion"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Admin/EditExam.aspx" 
+                            Text="Edit Question" Value="Edit Question"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Schedule" Value="Schedule">
+                        <asp:MenuItem Text="Exam Schedule" Value="Exam Schedule" 
+                            NavigateUrl="~/Admin/ShowExamRequest.aspx"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Reports" Value="Reports">
+                         <asp:MenuItem NavigateUrl="~/Admin/studentReport.aspx"  Text="Students Reports" Value="Students Reports"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl ="~/Admin/StudantDatails.aspx" Text ="Student Details" Value ="Student Details"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Admin/SignOut.aspx" Text="Sign Out" 
+                        Value="Sign Out">
+                    </asp:MenuItem>
+                   </Items>
+               </asp:Menu>
+              </div>
+          
+        </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    <div id ="footer">
+            <br />
+            <center><h4>Copyright -Deep Govind</h4></center>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
